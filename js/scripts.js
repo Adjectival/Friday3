@@ -1,11 +1,11 @@
 // front-end logic
 $(document).ready(function() {
-  $('#ping').submit(function(event) {
+  $("#ping").submit(function(event) {
     event.preventDefault();
 
-    $('#result').text("test output");
-    $('.pong').show();
-
+    $("#pong").show();
+    $("#result").text("test output");
   });
 });
+
 // back-end logic
