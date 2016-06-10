@@ -11,17 +11,18 @@ $(document).ready(function() {
 
 // back-end logic
 
-var arrayNumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+var arrayNumbers = [1,3,5,15,1,1,1,1,5,3,15];
 var ppNumbers = [];
 var pingPongedInputs = (function(arrayNumber) {
-  if ((arrayNumber % 15) === 0) {
-    ppNumbers.push(15);
-  } else {
-    ppNumbers.push(0);
-  }
+  arrayNumbers.forEach(function(arrayNumber) {
+    if ((arrayNumber % 15) === 0) {
+      ppNumbers.push('ping-pong');
+    } else if ((arrayNumber % 5) === 0) {
+      ppNumbers.push('pong');
+    } else if ((arrayNumber % 3) === 0) {
+      ppNumbers.push('ping');
+    } else {
+      ppNumbers.push(arrayNumber);
+    }
+  });
 });
-
-//   } else if ((arrayedInput % 5) === 0) {
-//     pingPongedInputs.push('pong');
-//   } else if ((arrayedInput % 3) === 0) {
-//     pingPongedInputs.push('ping');
