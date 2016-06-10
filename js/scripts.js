@@ -1,10 +1,13 @@
+// This project is unfinished. I need to review quite a lot of material.
+// Will resubmit as soon as I can fulfill all requirements successfully.
+
 // front-end logic
 $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
     // var arrayNumbers = [1,playUntilNumber];
     var playUntilNumber = $('#input2').val();
-    $('#result').append('<p>' + pingPongedInputs(playUntilNumber) + '<p>');
+    $('#result').append('<p>' + pingPongedInputs(20) + '<p>');
     $('#pong').show();
   });
 });
