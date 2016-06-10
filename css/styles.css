@@ -1,3 +1,9 @@
 #pong {
   display: none;
 }
+
+#result {
+  font-size: 24px;
+  font-family: monospace, sans-serif;
+  color: red;
+}
