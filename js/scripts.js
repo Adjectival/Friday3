@@ -4,14 +4,17 @@ $(document).ready(function() {
     event.preventDefault();
     // var arrayNumbers = [1,playUntilNumber];
     var playUntilNumber = $('#input2').val();
-    $('#result').append('<p>' + pingPongedInputs() + '<p>');
+    $('#result').append('<p>' + pingPongedInputs(playUntilNumber) + '<p>');
     $('#pong').show();
   });
 });
 
 // back-end logic
-
-var arrayNumbers = [1,3,5,15,1,1,1,1,5,3,15];
+var upperBound = $('#input2').val();
+var arrayNumbers = [];
+for (i = 0; i < upperBound; i++){
+  arrayNumbers.push(1);
+}
 var ppNumbers = [];
 var pingPongedInputs = (function(arrayNumber) {
   arrayNumbers.forEach(function(arrayNumber) {
