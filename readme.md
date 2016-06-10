@@ -1,4 +1,4 @@
-# _Ping Pong_
+# _Ping Pong by Number_
 
 #### _Ping Pong number classifier, 10 June 2016_
 
@@ -6,24 +6,32 @@
 
 ## Description
 
-_Ping Pong JS game. This web application returns (...) when it receives user input (integers)._
+_Ping Pong JS game. This web application will display a range of numbers after user types a number for input and clicks the Play button. Range of numbers runs from 1 until the input, with numbers up to five digits allowed._
+_Replays without reloading page are allowed; the previous input is discarded and a new range of numbers (and usually some words) is displayed._
 
-* _User inputs a word starting with a vowel the word receives 'ay' at end of word_
-  * **Example Input:** office
-  * **Example Output:** officeay
-* _Words starting with one or more consonants get all of the first consecutive consonants moved to the end, and 'ay' is added._
-  * **Example Input:** student
-  * **Example Output:** udentstay
-* _If the first consonants include "qu", it moves the "u" along with the "q"._
-  * **Example Input:** query
-  * **Example Output:** eryquay
-* _Words that start with "y" treat the "y" as a consonant_
-  * **Example Input:** yes
-  * **Example Output:** esyay
-* _Capitalization carries over_
-  * **Example Input:** Hello
-  * **Example Output:** elloHay
+## Specifications
 
+* _If user input is not a number, error message is alerted._
+  * **Example Input:** five
+  * **Example Output:** "Please enter a number between 99999 and 1"
+
+* _If user input is zero or 0, error message is alerted._
+  * **Example Input:** 0
+  * **Example Output:** "Please enter a number between 99999 and 1"
+
+* _Numbers in range divisible by 3 are replaced with "ping" and displayed in order._
+  * **Example Input:** 3
+  * **Example Output:** 1,2,ping
+* _Numbers in range divisible by 5 are also replaced with "pong" and displayed in order._
+  * **Example Input:** 12
+  * **Example Output:** 1,2,ping,4,pong,ping,7,8,ping,pong,11,ping
+* _Numbers in range divisible by 15 are replaced with "ping-pong" and displayed in order._
+  * **Example Input:** 34
+  * **Example Output:** ...,28,29,ping-pong,31,32,ping,34
+
+* _If user clicks Play button after replacing input with new value, range of numbers and substituted words is re-calculated and displayed instead of the earlier result._
+  * **Example Input:** 5
+  * **Example Output:** 1,2,ping,4,pong
 
 ## Support and contact details
 
