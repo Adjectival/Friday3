@@ -10,13 +10,13 @@ $(document).ready(function() {
 });
 
 // // back-end logic
-var playUntil = 18;
+var playUntil = 12;
 var emptyNums = [];
 
 var loopCount = 0;
 for (i=1; i<playUntil; i++) {
-  loopCount+i;
-  var inputNums = emptyNums.push(playUntil);
+  var loopCount=i;
+  var inputNums = emptyNums.push(loopCount);
 }
 
 // var inputNums = [2,3,4,5,6];
