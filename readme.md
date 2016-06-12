@@ -1,12 +1,12 @@
 # _Ping Pong by Number_
 
-#### _Ping Pong number classifier, 10 June 2016_
+#### _Ping Pong number classifier, June 2016_
 
 #### By _Alexander Jacks_
 
 ## Description
 
-_Ping Pong JS game. This web application will display a range of numbers after user types a number for input and clicks the Play button. Range of numbers runs from 1 until the input, with numbers up to five digits allowed._
+_Ping Pong JS game. This web application will display a range of numbers and words after user types a number for input and clicks the Play button. The range of numbers/words runs from 1 until the input, with inputs up to five digits allowed._
 _Replays without reloading page are allowed; the previous input is discarded and a new range of numbers (and usually some words) is displayed._
 
 ## Specifications
