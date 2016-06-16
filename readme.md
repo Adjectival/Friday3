@@ -10,6 +10,21 @@ _Ping Pong JS game. This web application will display a range of numbers and wor
 _Replays without reloading page are allowed; the previous input is discarded and a new range of numbers (and usually some words) is displayed._
 
 ## Specifications
+* _Numbers in output range are displayed in order._
+  * **Example Input:** 2
+  * **Example Output:** 1,2
+
+* _Numbers in range divisible by 3 are replaced with "ping" when displayed._
+  * **Example Input:** 3
+  * **Example Output:** 1,2,ping
+
+* _Numbers in range divisible by 5 are replaced with "pong" and displayed._
+  * **Example Input:** 7
+  * **Example Output:** 1,2,ping,4,pong,ping,7
+
+* _Numbers in range divisible by 15 are replaced with "ping-pong" and displayed in order._
+  * **Example Input:** 34
+  * **Example Output:** ...,28,29,ping-pong,31,32,ping,34
 
 * _If user input is not a number, error message is alerted._
   * **Example Input:** five
@@ -18,16 +33,6 @@ _Replays without reloading page are allowed; the previous input is discarded and
 * _If user input is zero or 0, error message is alerted._
   * **Example Input:** 0
   * **Example Output:** "Please enter a number between 99999 and 1"
-
-* _Numbers in range divisible by 3 are replaced with "ping" and displayed in order._
-  * **Example Input:** 3
-  * **Example Output:** 1,2,ping
-* _Numbers in range divisible by 5 are also replaced with "pong" and displayed in order._
-  * **Example Input:** 12
-  * **Example Output:** 1,2,ping,4,pong,ping,7,8,ping,pong,11,ping
-* _Numbers in range divisible by 15 are replaced with "ping-pong" and displayed in order._
-  * **Example Input:** 34
-  * **Example Output:** ...,28,29,ping-pong,31,32,ping,34
 
 * _If user clicks Play button after replacing input with new value, range of numbers and substituted words is re-calculated and displayed instead of the earlier result._
   * **Example Input:** 5
