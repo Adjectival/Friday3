@@ -1,31 +1,32 @@
 // back-end logic
-var arrayNumbers = [];
-var ppNumbers = [];
-var playUntil = parseInt($("#until-number").val());
-var pingPongedInputs = function(arrayNumber) {
-  var i = 0;
-  while (i<playUntil) {
-    arrayNumbers.forEach(function(arrayNumber) {
-      if ((arrayNumber % 15) === 0) {
-        ppNumbers.push('ping-pong');
-      } else if ((arrayNumber % 5) === 0) {
-        ppNumbers.push('pong');
-      } else if ((arrayNumber % 3) === 0) {
-        ppNumbers.push('ping');
-      } else {
-        ppNumbers.push(arrayNumber);
-      }
-    });
-    i++;
+function pingPong(length) {
+  var ppArray = [];
+  for (var i=1; i<=length; i++) {
+    ppArray.push(i);
   }
-};
+  var output;
+  range.forEach(function(i) {
+    output = '';
+    if (i%15===0){
+			ppArray.push('ping-pong');
+		} else if(i%5===0){
+      ppArray.push('pong');
+		} else if(i%3===0) {
+      ppArray.push('ping');
+		} else {
+      output+=i;
+    }
+		print(output);
+	});
+}
 // front-end logic
 $(document).ready(function() {
   $('form').submit(function(event) {
-    event.preventDefault();
-    pingPongedInputs();
-    var result = ppNumbers;
+    var playUntil = parseInt($('#until-number').val());
+    var result = ppArray;
     $('#ppwords').show();
     $('#result').text(result);
+    event.preventDefault();
+    pingPong();
   });
 });
