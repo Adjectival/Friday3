@@ -1,25 +1,31 @@
-// // back-end logic
-var inputNumber = "";
-var loopCount = 1;
+// back-end logic
+var arrayNumbers = [];
+var ppNumbers = [];
 var playUntil = parseInt($("#until-number").val());
-while (loopCount<=playUntil) {
-  loopCount++;
-  if ((inputNumber%15) === 0) {
-  inputNumber = inputNumber + "ping-pong";
-  } else if ((inputNumber%5) === 0) {
-  inputNumber = inputNumber + 'pong';
-  } else if ((inputNumber%3) === 0) {
-  inputNumber = inputNumber + 'ping';
-  } else {
-  inputNumber = inputNumber + loopCount;
+var pingPongedInputs = function(arrayNumber) {
+  var i = 0;
+  while (i<playUntil) {
+    arrayNumbers.forEach(function(arrayNumber) {
+      if ((arrayNumber % 15) === 0) {
+        ppNumbers.push('ping-pong');
+      } else if ((arrayNumber % 5) === 0) {
+        ppNumbers.push('pong');
+      } else if ((arrayNumber % 3) === 0) {
+        ppNumbers.push('ping');
+      } else {
+        ppNumbers.push(arrayNumber);
+      }
+    });
+    i++;
   }
-}
+};
 // front-end logic
 $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
-    var inputNumber = $("#until-number").val();
-    $('#pong').show();
-    $('#result').text(inputNumber);
+    pingPongedInputs();
+    var result = ppNumbers;
+    $('#ppwords').show();
+    $('#result').text(result);
   });
 });
